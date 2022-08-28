@@ -1,0 +1,54 @@
+$base-blue: #4f44bb;
+$bg-section-menu: #0f112d;
+$bg-section-dashboard: #1b1c30;
+$border-radius-common: 12px;
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 90%;
+  grid-template-columns: 80px 1.5fr 4.5fr;
+  grid-template-rows: 800px;
+}
+
+.sidebar {
+  background-color: $base-blue;
+  border-top-left-radius: $border-radius-common;
+  border-bottom-left-radius: $border-radius-common;
+}
+
+.menu-section {
+  background-color: $bg-section-menu;
+}
+
+.dashboard-section {
+  background-color: $bg-section-dashboard;
+  border-top-right-radius: $border-radius-common;
+  border-bottom-right-radius: $border-radius-common;
+}
+
+.flex {
+  display: flex;
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-col {
+    flex-direction: column;
+  }
+}
+
+.grid {
+  display: grid;
+}
