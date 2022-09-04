@@ -1,7 +1,17 @@
 $base-blue: #4f44bb;
+$base-text-color: #fff;
 $bg-section-menu: #0f112d;
 $bg-section-dashboard: #1b1c30;
 $border-radius-common: 12px;
+$border-circular: 50%;
+$sidebar-item-border-radius: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $base-text-color;
+}
 
 body {
   margin: 0;
@@ -11,6 +21,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.resource-links {
+  bottom: 0;
+  font-size: 8px;
+  margin-top: 36px;
+  & p, & a {
+    color: #000;
+  }
 }
 
 .main-container {
@@ -25,6 +44,57 @@ body {
   background-color: $base-blue;
   border-top-left-radius: $border-radius-common;
   border-bottom-left-radius: $border-radius-common;
+  padding: 18px 0;
+  align-items: center;
+  justify-content: space-between;
+
+  & .sidebar-top {
+    gap: 48px;
+    align-items: center;
+  }
+
+  & .sidebar-item-container {
+    gap: 18px;
+
+    & .sidebar-item {
+      border: none;
+      border-radius: $sidebar-item-border-radius;
+      font-size: 28px;
+      background-size: 20px;
+
+      &:nth-child(1) {
+        background-color: #4b8ad9;
+      }
+
+      &:nth-child(2) {
+        background-color: #e04f61;
+      }
+
+      &:nth-child(3) {
+        background-color: #d89b53;
+        background-image: url('../visuals/headphone-icon.png');
+      }
+
+      &:nth-child(4) {
+        background-color: #6348b2;
+        background-image: url('../visuals/add-message-icon.png');
+      }
+    }
+  }
+
+  & .power-button {
+    background-image: url('../visuals/power-icon.png');
+    background-size: 14px;
+  }
+
+  & .power-button, & .sidebar-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: $border-circular;
+  }
 }
 
 .menu-section {
@@ -51,4 +121,55 @@ body {
 
 .grid {
   display: grid;
+}
+
+.window-button-container {
+  gap: 6px;
+
+  .window-button {
+    border: none;
+    border-radius: $border-circular;
+    width: 10px;
+    height: 10px;
+
+    &-close {
+      background-color: #ec6a60;
+    }
+
+    &-minimize {
+      background-color: #f5c04f;
+    }
+
+    &-expand {
+      background-color: #64c856;
+    }
+  }
+
+}
+
+.profile-icon-wrapper {
+  background-color: #fff;
+  width: 46px;
+  height: 46px;
+  position: relative;
+
+  &, & .profile-icon {
+    border-radius: $border-circular;
+  }
+
+  & .profile-icon {
+    position: absolute;
+    background-color: red;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid $base-blue;
+    background-image: url('../visuals/sumer.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
 }

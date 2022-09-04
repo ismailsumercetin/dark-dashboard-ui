@@ -1,18 +1,18 @@
 export default function SidebarItemContainer() {
     return (
-        <section>
-            <SidebarItem />
-            <SidebarItem />
+        <section className="sidebar-item-container flex flex-col">
+            <SidebarItem letter={'S'} />
+            <SidebarItem letter={'A'} />
             <SidebarItem />
             <SidebarItem />
         </section>
     );
 };
 
-function SidebarItem() {
+function SidebarItem({ letter }) {
     return (
-        <button>
-
+        <button className="sidebar-item">
+            {letter && <strong>{ letter }</strong>}
         </button>
     );
 };
