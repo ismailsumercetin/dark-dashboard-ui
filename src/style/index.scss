@@ -23,6 +23,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  cursor: pointer;
+}
+
 .resource-links {
   bottom: 0;
   font-size: 8px;
@@ -36,7 +40,7 @@ body {
   margin: 0 auto;
   margin-top: 40px;
   width: 90%;
-  grid-template-columns: 80px 1.5fr 4.5fr;
+  grid-template-columns: 80px 1fr 4fr;
   grid-template-rows: 800px;
 }
 
@@ -99,6 +103,7 @@ body {
 
 .menu-section {
   background-color: $bg-section-menu;
+  padding: 48px 36px 24px 36px;
 }
 
 .dashboard-section {
@@ -172,4 +177,99 @@ body {
     background-size: cover;
     background-position: center;
   }
+}
+
+.menu-item {
+  width: 42px;
+  height: 42px;
+  background-color: #191a37;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  position: relative;
+  border: none;
+
+  &.selected {
+    background-color: #4f44ba;
+    -webkit-box-shadow: 0px 7px 30px -5px rgba(79,68,186,1);
+    -moz-box-shadow: 0px 7px 30px -5px rgba(79,68,186,1);
+    box-shadow: 0px 7px 30px -5px rgba(79,68,186,1);
+  }
+
+  &-title {
+    font-size: 12px;
+    opacity: .6;
+  }
+
+  &-section-title {
+    font-size: 14px;
+  }
+
+  &-section {
+    gap: 22px;
+  }
+
+  &-wrapper {
+    gap: 12px;
+    align-items: center;
+    width: 60px;
+  }
+
+  &-row {
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+
+  &.icon-dashboard {
+    background-image: url('../visuals/dashboard-icon.png');
+  }
+
+  &.icon-calculator {
+    background-image: url('../visuals/calculator-icon.png');
+  }
+
+  &.icon-expenses {
+    background-image: url('../visuals/expenses-icon.png');
+  }
+
+  &.icon-food {
+    background-image: url('../visuals/food-icon.png');
+  }
+
+  &.icon-health {
+    background-image: url('../visuals/health-icon.png');
+  }
+
+  &.icon-wallets {
+    background-image: url('../visuals/wallet-icon.png');
+  }
+
+  &.icon-account {
+    background-image: url('../visuals/account-icon.png');
+  }
+
+  &.icon-savings {
+    background-size: 18px;
+    background-image: url('../visuals/savings-icon.png');
+  }
+
+  &.icon-currencies {
+    background-size: 20px;
+    background-image: url('../visuals/currencies-icon.png');
+  }
+
+  &.icon-wallets, &.icon-health, &.icon-food {
+    background-size: 16px;
+  }
+
+  &.icon-upcoming {
+    background-size: 12px;
+    background-image: url('../visuals/upcoming-icon.png');
+  }
+}
+
+.menu-section {
+  gap: 24px;
 }
