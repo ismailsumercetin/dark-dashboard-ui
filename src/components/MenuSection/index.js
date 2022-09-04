@@ -2,7 +2,7 @@ import MenuItemContainer from "./MenuItemContainer";
 
 export default function MenuSection() {
     return (
-        <section className="menu-section">
+        <section className="menu-section flex flex-col">
             <MenuItemContainer title={'General'}/>
             <MenuItemContainer title={'Account'}/>
         </section>
