@@ -272,4 +272,33 @@ button {
 
 .menu-section {
   gap: 24px;
+
+  & .brand-image {
+    position: relative;
+    margin: 0 auto;
+    width: 160px;
+    height: 200px;
+    background-image: url('../visuals/brand-image.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+  }
+
+  & .get-pro-button {
+    color: #8e9bd2;
+    font-size: 12px;
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+    margin: auto;
+    border: none;
+    background-color: #fff;
+    width: 70%;
+    height: 40px;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
