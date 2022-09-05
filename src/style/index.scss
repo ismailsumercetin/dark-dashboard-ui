@@ -110,6 +110,15 @@ button {
   background-color: $bg-section-dashboard;
   border-top-right-radius: $border-radius-common;
   border-bottom-right-radius: $border-radius-common;
+  padding: 48px 36px 24px 36px;
+
+  & h2 {
+    font-size: 16px;
+  }
+
+  & .dashboard-header {
+    gap: 36px;
+  }
 }
 
 .flex {
@@ -286,7 +295,7 @@ button {
 
   & .get-pro-button {
     color: #8e9bd2;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
     position: absolute;
     right: 0;
@@ -300,5 +309,28 @@ button {
     border-radius: 12px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.revenue-section {
+  min-width: 280px;
+  & .progress-bar-wrapper {
+    background-color: #313246;
+    & .progress-bar-inside {
+      width: 70%;
+      height: 20px;
+      background-color: #4F46BB;
+    }
+
+    &, .progress-bar-inside {
+      border-radius: 2px;
+    }
+  }
+}
+
+.invoice-section, .revenue-section {
+  gap: 20px;
+  & .invoice-item-container {
+    gap: 48px;
   }
 }
