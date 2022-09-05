@@ -39,8 +39,7 @@ button {
 .main-container {
   margin: 0 auto;
   margin-top: 40px;
-  width: 90%;
-  grid-template-columns: 80px 1fr 4fr;
+  grid-template-columns: 80px 244px 976px;
   grid-template-rows: 800px;
 }
 
@@ -117,7 +116,8 @@ button {
   }
 
   & .dashboard-header {
-    gap: 36px;
+    border-bottom: 2px solid #2B2B41;
+    padding-bottom: 26px;
   }
 }
 
@@ -316,6 +316,7 @@ button {
   min-width: 280px;
   & .progress-bar-wrapper {
     background-color: #313246;
+    margin-bottom: 4px;
     & .progress-bar-inside {
       width: 70%;
       height: 20px;
@@ -328,9 +329,31 @@ button {
   }
 }
 
+.invoice-section {
+  flex: 2.5;
+}
+
+.revenue-section {
+  flex: 1.5;
+  justify-content: space-between;
+}
+
 .invoice-section, .revenue-section {
+  & .invoice-title, .revenue-title {
+    font-size: 12px;
+    color: #525A75;
+    font-weight: 700;
+  }
+
+  & .invoice-value {
+    font-size: 22px;
+  }
   gap: 20px;
   & .invoice-item-container {
     gap: 48px;
+
+    & .invoice-item {
+      gap: 2px; 
+    }
   }
 }

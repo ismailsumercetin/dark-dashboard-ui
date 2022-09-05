@@ -41,7 +41,7 @@ function InvoiceSection() {
 
 function InvoiceItem({ value, title }) {
   return (
-    <div className="invoice-item">
+    <div className="invoice-item flex flex-col">
       <p className="invoice-value">{ `$${value}` }</p>
       <p className="invoice-title">{ title }</p>
     </div>
@@ -58,7 +58,7 @@ function RevenueSection() {
 
           </div>
         </div>
-        <p>$45,941 Overdue</p>
+        <p className="revenue-title">$45,941 Overdue</p>
       </div>
     </section>
   );
