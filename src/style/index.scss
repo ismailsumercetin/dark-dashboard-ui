@@ -40,7 +40,7 @@ button {
   margin: 0 auto;
   margin-top: 40px;
   grid-template-columns: 80px 244px 976px;
-  grid-template-rows: 800px;
+  grid-template-rows: 820px;
   justify-content: center;
 }
 
@@ -129,15 +129,120 @@ button {
     grid-template-columns: repeat(6, 1fr);
 
     & .monthly-sales {
-      gap: 16px;
       grid-column: 1 / 4;
       & .bar-chart-wrapper {
         justify-content: space-between;
       }
     }
 
+    & .monthly-sales, .active-users {
+      gap: 36px;
+      & h2 {
+        font-size: 20px;
+      }
+    }
+
     & .active-users {
       grid-column: 4 / 7;
+
+      & .active-user-chart {
+        position: relative;
+        border-radius: 8px;
+        background-color: #4e44bb;
+        height: 100%;
+        gap: 40px;
+        align-items: center;
+
+        & .line {
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #fff;
+          top: 50%;
+          opacity: .2;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-bottom: 7px solid #fff;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          top: 48.5%;
+          left: -3.3px;
+          transform: rotate(90deg);
+        }
+
+        & .close-btn {
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background-color: #fff;
+          color: #000;
+          text-align: center;
+          top: 8px;
+          right: 8px;
+          font-weight: 600;
+          font-size: 16px;
+          border: none;
+          border-radius: 50%;
+        }
+
+        & .vertical-num-active-users-container {
+          & .vertical-num-active-users {
+            font-size: 14px;
+          }
+          margin-left: 24px;
+          gap: 30px;
+          flex-direction: column-reverse;
+        }
+
+        & .active-user-bar-container {
+          align-items: flex-end;
+          gap: 36px;
+          height: 100%;
+          padding: 20px 0;
+        }
+
+        & .active-user-bar-container .active-user-bar {
+          width: 4px;
+          height: 80%;
+          background-color: #fff;
+          border-radius: 6px;
+
+          &:nth-child(1) {
+            height: 80%;
+          }
+
+          &:nth-child(2) {
+            height: 35%;
+          }
+
+          &:nth-child(3) {
+            height: 65%;
+          }
+
+          &:nth-child(4) {
+            height: 95%;
+          }
+
+          &:nth-child(5) {
+            height: 25%;
+          }
+
+          &:nth-child(6) {
+            height: 55%;
+          }
+
+          &:nth-child(7) {
+            height: 70%;
+          }
+
+          &:nth-child(odd) {
+            opacity: .6;
+          }
+        }
+      }
     }
   }
 }
@@ -307,7 +412,7 @@ button {
     position: relative;
     margin: 0 auto;
     width: 160px;
-    height: 200px;
+    height: 100%;
     background-image: url('../visuals/brand-image.png');
     background-size: cover;
     background-position: center;
@@ -392,17 +497,80 @@ button {
   }
 
   & .month {
-    font-size: 10px;
     text-align: center;
+  }
+
+  & .month, .vertical-num {
+    font-size: 10px;
+    opacity: .6;
+  }
+
+  & .vertical-num-container {
+    flex-direction: column-reverse;
+    & .vertical-num {
+      margin: 8px 0;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
 .infobox-item {
   border-radius: 8px;
   height: 180px;
+  padding: 20px;
   background-color: #27273c;
+  justify-content: space-between;
+
+  & .infobox-sub-text {
+    opacity: .4;
+    font-size: 12px;
+  }
+
+  & .infobox-info-container {
+    align-items: center;
+    gap: 12px;
+    & .infobox-val {
+      font-size: 40px;
+    }
+  }
+
   &.total-balance {
+    align-items: center;
     grid-column: 1 / 3;
+
+    & .amount {
+      font-size: 28px;
+      letter-spacing: 1.5px;
+    }
+
+    & .dollar, .dec {
+      font-size: 14px;
+    }
+
+    & .dollar {
+      margin-right: 4px;
+    }
+
+    & .total-balance-button-container {
+      gap: 12px;
+      & button {
+        font-size: 12px;
+        border-radius: 8px;
+        border: none;
+        width: 108px;
+        height: 42px;
+
+        &:nth-child(1) {
+          background-color: #353549;
+        }
+
+        &:nth-child(2) {
+          background-color: #4e44bb;
+        }
+      }
+    }
   }
 
   &.upcoming-payments {
