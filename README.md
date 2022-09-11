@@ -1,3 +1,8 @@
+I picked a random dashboard design from dribbble, and implemented it using Javascript (React), and SCSS (Flexbox, Grid).
+
+Design inspiration: https://lnkd.in/ehUZQk_J
+GitHub Repository: https://lnkd.in/esc6h5SG
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
