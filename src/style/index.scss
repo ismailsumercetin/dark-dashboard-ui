@@ -583,5 +583,38 @@ button {
 
   &.transaction-history {
     grid-column: 1 / 5;
+    justify-content: unset;
+
+    & h2 {
+      margin-bottom: 32px;
+    }
+
+    & > div:first-of-type {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    & .transaction-info-wrapper {
+      align-items: center;
+      justify-content: space-between;
+      & > div:first-of-type {
+        align-items: center;
+      }
+    }
+    & .transaction-amount {
+      color: #8b494a;
+      font-weight: 600;
+    }
+    & .arrow-icon {
+      width: 42px;
+      height: 42px;
+      margin-right: 16px;
+      border-radius: 8px;
+      background-color: #2f2e42;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-image: url('../visuals/arrow-right-icon.png');
+    }
   }
 }
