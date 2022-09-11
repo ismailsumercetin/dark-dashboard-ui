@@ -41,11 +41,22 @@ const BAR_VALUES = [
     }
 ];
 
+const VERTICAL_VALUES = ['0', '4', '6', '10', '15'];
+
+function renderVerticalNumbers() {
+    return (
+        <div className="vertical-num-container flex flex-col">
+            {VERTICAL_VALUES.map((item, i) => <span className="vertical-num" key={i}>{`${item}k`}</span>)}
+        </div>
+    );
+};
+
 export default function MonthlySales() {
     return (
         <div className="monthly-sales flex flex-col">
             <h2>Monthly Sales</h2>
             <div className="bar-chart-wrapper flex flex-row">
+                {renderVerticalNumbers()}
                 {BAR_VALUES.map((item, i) => <Bar key={i} {...item} />)}
             </div>
         </div>
