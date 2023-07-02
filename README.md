@@ -1,4 +1,4 @@
-![DarkDashboard-1](https://i.ibb.co/TtWyL7t/1.png)
+![Dark Dashboard image](https://i.imgur.com/9Le69TH.png)
 
 I picked a random dashboard design from dribbble, and implemented it using Javascript (React), and SCSS (Flexbox, Grid).
 
